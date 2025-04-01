@@ -20,7 +20,7 @@ const generateAccessKey = () => crypto.randomBytes(16).toString('hex');
 // Function to fetch page details using the token
 const getPageDetails = async (token) => {
   try {
-    const response = await axios.get(`https://graph.facebook.com/v15.0/me`, {
+    const response = await axios.get(`https://graph.facebook.com/v21.0/me`, {
       params: { access_token: token },
     });
     return response.data;
